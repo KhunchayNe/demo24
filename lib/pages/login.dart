@@ -4,6 +4,7 @@ import 'package:demo24/service/database.dart';
 import 'package:demo24/service/shared_pref.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:demo24/pages/signin.dart';
 
 class Login extends StatefulWidget {
   const Login({super.key});
@@ -13,7 +14,7 @@ class Login extends StatefulWidget {
 }
 
 class _LoginState extends State<Login> {
- String email = "", password = "", name = "", pic = "", username = "", id = "";
+  String email = "", password = "", name = "", pic = "", username = "", id = "";
   TextEditingController usermailcontroller = TextEditingController();
   TextEditingController userpasswordcontroller = TextEditingController();
 
@@ -255,7 +256,7 @@ class _LoginState extends State<Login> {
                           Navigator.push(
                               context,
                               MaterialPageRoute(
-                                  builder: (context) => Home()));
+                                  builder: (context) => SignIn()));
                         },
                         child: Text(
                           " Sign Up Now!",

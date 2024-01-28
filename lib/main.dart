@@ -4,9 +4,10 @@ import 'package:demo24/pages/login.dart';
 import 'package:demo24/service/auth.dart';
 import 'package:demo24/pages/forgotpassword.dart';
 import 'package:firebase_core/firebase_core.dart';
-
+import 'package:shared_preferences/shared_preferences.dart';
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
+  SharedPreferences prefs = await SharedPreferences.getInstance();
   await Firebase.initializeApp();
   runApp(const MyApp());
 }

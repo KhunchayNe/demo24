@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:demo24/pages/home.dart';
+import 'package:demo24/pages/signin.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 
 class ForgotPassword extends StatefulWidget {
@@ -129,9 +130,9 @@ class _ForgotPasswordState extends State<ForgotPassword> {
                               ),
                               GestureDetector(
                                 onTap: () {
-                                  if(_formkey.currentState!.validate()){
+                                  if (_formkey.currentState!.validate()) {
                                     setState(() {
-                                      email= usermailcontroller.text;
+                                      email = usermailcontroller.text;
                                     });
                                     resetPassword();
                                   }
@@ -182,7 +183,7 @@ class _ForgotPasswordState extends State<ForgotPassword> {
                           Navigator.push(
                               context,
                               MaterialPageRoute(
-                                  builder: (context) => Home()));
+                                  builder: (context) => SignIn()));
                         },
                         child: Text(
                           " Sign Up Now!",
